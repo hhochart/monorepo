@@ -20,6 +20,7 @@ importers:
       eslint-plugin-vue: ^8.2.0
       postcss: ^8.4.12
       prettier: ^2.5.1
+      prettier-plugin-tailwindcss: ^0.1.8
       tailwindcss: ^3.0.23
       typescript: ~4.5.5
       vite: ^2.8.4
@@ -43,6 +44,7 @@ importers:
       eslint-plugin-vue: 8.5.0_eslint@8.11.0
       postcss: 8.4.12
       prettier: 2.6.0
+      prettier-plugin-tailwindcss: 0.1.8_prettier@2.6.0
       tailwindcss: 3.0.23_autoprefixer@10.4.4
       typescript: 4.5.5
       vite: 2.8.6
@@ -9758,6 +9760,15 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.1.8_prettier@2.6.0:
+    resolution: {integrity: sha512-hwarSBCswAXa+kqYtaAkFr3Vop9o04WOyZs0qo3NyvW8L7f1rif61wRyq0+ArmVThOuRBcJF5hjGXYk86cwemg==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.6.0
     dev: true
 
   /prettier/2.3.0:

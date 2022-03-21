@@ -9,8 +9,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@mdm/uikit": "workspace:../../libs/uikit",
     "@mdm/config": "workspace:../../tools/config",
+    "@mdm/uikit": "workspace:../../libs/uikit",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },
@@ -26,6 +26,7 @@
     "eslint-plugin-vue": "^8.2.0",
     "postcss": "^8.4.12",
     "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
     "tailwindcss": "^3.0.23",
     "typescript": "~4.5.5",
     "vite": "^2.8.4",
