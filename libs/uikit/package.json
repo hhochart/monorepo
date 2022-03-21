@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "dev": "vue-tsc --noEmit && vite build --watch",
+    "dev": "npm run storybook",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
