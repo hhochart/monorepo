@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5" :class="cardClass">
+  <div class="p-16 rounded" :class="cardClass">
     <slot>Default slot</slot>
   </div>
 </template>

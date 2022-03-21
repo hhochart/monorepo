@@ -1,6 +1,9 @@
 import { computed } from 'vue';
 <template>
-  <button class="px-5 py-3 rounded-full ring" :class="buttonTheme">
+  <button
+    class="px-16 py-8 rounded-sm ring-opacity-50 focus:ring-2"
+    :class="buttonTheme"
+  >
     <slot>{{ props.message }}</slot>
   </button>
 </template>
@@ -28,13 +31,13 @@ const props = withDefaults(defineProps<Props>(), {
 const buttonTheme = computed(() => {
   switch (props.theme) {
     case ButtonTheme.PRIMARY:
-      return 'bg-blue-100 ring-blue-200'
+      return 'bg-primary ring-primary-dark text-white'
 
     case ButtonTheme.SECONDARY:
-      return 'bg-red-100 ring-red-200'
+      return 'bg-secondary ring-secondary-craft text-white'
 
     default:
-      return 'bg-blue-100 ring-blue-200'
+      return 'bg-primary-dark ring-primary-dark text-white'
   }
 })
 </script>

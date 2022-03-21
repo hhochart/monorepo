@@ -5,7 +5,8 @@ export default {
   component: Card,
   argTypes: {
     elevated: {
-      control: { type: 'boolean' }
+      control: { type: 'boolean' },
+      options: ['primary', 'secondary']
     }
   }
 }

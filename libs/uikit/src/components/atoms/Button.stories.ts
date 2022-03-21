@@ -16,7 +16,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<Button v-bind="args">Button slot</Button>'
+  template: `<Button v-bind="args">Button slot</Button>`
 })
 
 export const Primary = Template.bind({})
