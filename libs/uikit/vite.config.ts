@@ -1,0 +1,40 @@
+import { fileURLToPath, URL } from 'url'
+
+import path from 'path'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import dts from 'vite-plugin-dts'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue(), dts()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  server: {
+    watch: {
+      ignored: ['!**/node_modules/your-package-name/**']
+    }
+  },
+  build: {
+    watch: {
+      exclude: 'node_modules/**',
+      include: 'src/**'
+    },
+    lib: {
+      entry: path.resolve(__dirname, 'src/main.ts'),
+      name: '@mdm/uikit',
+      fileName: (format) => `uikit.${format}.js`
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
+  }
+})

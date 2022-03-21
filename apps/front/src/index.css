@@ -1,0 +1,3 @@
+/* @tailwind/base is contained in @mdm/uikit already */
+@tailwind components;
+@tailwind utilities;
