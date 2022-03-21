@@ -7,6 +7,9 @@ export default {
     theme: {
       control: { type: 'select' },
       options: ['primary', 'secondary']
+    },
+    rounded: {
+      control: { type: 'boolean' }
     }
   }
 }
@@ -21,10 +24,12 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({})
 Primary.args = {
-  theme: 'primary'
+  theme: 'primary',
+  rounded: false
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
-  theme: 'secondary'
+  theme: 'secondary',
+  rounded: false
 }

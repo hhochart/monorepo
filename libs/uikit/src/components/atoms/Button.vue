@@ -2,9 +2,9 @@ import { computed } from 'vue';
 <template>
   <button
     class="px-16 py-8 rounded-sm ring-opacity-50 focus:ring-2"
-    :class="buttonTheme"
+    :class="[themeClasses, roundedClasses]"
   >
-    <slot>{{ props.message }}</slot>
+    <slot>Default slot</slot>
   </button>
 </template>
 
@@ -19,16 +19,16 @@ enum ButtonTheme {
 import { computed } from 'vue'
 
 interface Props {
-  message?: string
   theme: ButtonTheme
+  rounded?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  message: 'DEFAULT MESSAGE',
-  theme: ButtonTheme.PRIMARY
+  theme: ButtonTheme.PRIMARY,
+  rounded: false
 })
 
-const buttonTheme = computed(() => {
+const themeClasses = computed(() => {
   switch (props.theme) {
     case ButtonTheme.PRIMARY:
       return 'bg-primary ring-primary-dark text-white'
@@ -40,4 +40,8 @@ const buttonTheme = computed(() => {
       return 'bg-primary-dark ring-primary-dark text-white'
   }
 })
+
+const roundedClasses = computed(() =>
+  props.rounded ? 'rounded-full' : 'rounded-xs'
+)
 </script>
