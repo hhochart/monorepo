@@ -13,16 +13,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  server: {
-    watch: {
-      ignored: ['!**/node_modules/your-package-name/**']
-    }
-  },
   build: {
-    watch: {
-      exclude: 'node_modules/**',
-      include: 'src/**'
-    },
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
       name: '@mdm/uikit',
