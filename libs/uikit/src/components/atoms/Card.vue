@@ -1,12 +1,13 @@
 <template>
-  <div class="p-16 rounded" :class="cardClass">
+  <div class="mdm-p-16 mdm-rounded" :class="cardClass">
     <slot>Default slot</slot>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { computed } from 'vue'
-interface Props {
+
+export type Props = {
   elevated: boolean
 }
 
@@ -14,5 +15,5 @@ const props = withDefaults(defineProps<Props>(), {
   elevated: true
 })
 
-const cardClass = computed(() => (props.elevated ? 'shadow' : ''))
+const cardClass = computed(() => (props.elevated ? 'mdm-shadow' : ''))
 </script>

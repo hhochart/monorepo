@@ -8,3 +8,9 @@
     </slot>
   </p>
 </template>
+
+<script setup lang="ts">
+export type Props = {}
+
+const props = defineProps<Props>()
+</script>

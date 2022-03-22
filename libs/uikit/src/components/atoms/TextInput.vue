@@ -2,13 +2,13 @@
   <input
     :value="modelValue"
     :type="props.type"
-    class="border border-neural-dark rounded px-16 py-8 focus-within:ring-2 ring-neutral-dark focus-within:outline-none"
+    class="mdm-border mdm-border-neural-dark mdm-rounded mdm-px-16 mdm-py-8 focus-within:mdm-ring-2 mdm-ring-neutral-dark focus-within:mdm-outline-none"
     @input="$emit('update:modelValue', ($event.currentTarget as HTMLInputElement).value)"
   />
 </template>
 
 <script lang="ts" setup>
-type Props = {
+export type Props = {
   type: string
   modelValue: string | number
 }

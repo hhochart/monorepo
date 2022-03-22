@@ -1,4 +1,5 @@
-import Card from './Card.vue'
+import Card, { type Props } from './Card.vue'
+import type { Story } from '@storybook/vue3'
 
 export default {
   title: 'Card',
@@ -10,7 +11,7 @@ export default {
   }
 }
 
-const Template = (args) => ({
+const Template: Story<Props> = (args) => ({
   components: { Card },
   setup() {
     return { args }

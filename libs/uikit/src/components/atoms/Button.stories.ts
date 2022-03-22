@@ -1,8 +1,12 @@
-import Button from './Button.vue'
+import Button, { type Props } from './Button.vue'
+import type { StoryFn } from '@storybook/vue3'
 
 export default {
   title: 'Button',
   component: Button,
+  args: {
+    rounded: false
+  },
   argTypes: {
     theme: {
       control: { type: 'select' },
@@ -14,7 +18,7 @@ export default {
   }
 }
 
-const Template = (args) => ({
+const Template: StoryFn<Props> = (args) => ({
   components: { Button },
   setup() {
     return { args }
@@ -24,12 +28,10 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({})
 Primary.args = {
-  theme: 'primary',
-  rounded: false
+  theme: 'primary'
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
-  theme: 'secondary',
-  rounded: false
+  theme: 'secondary'
 }

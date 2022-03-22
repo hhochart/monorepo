@@ -1,11 +1,12 @@
-import Title from './Title.vue'
+import Title, { type Props } from './Title.vue'
+import type { Story } from '@storybook/vue3'
 
 export default {
   title: 'Title',
   component: Title
 }
 
-const Template = (args: { tag: string }) => ({
+const Template: Story<Props> = (args) => ({
   components: { Title },
   setup() {
     return { args }

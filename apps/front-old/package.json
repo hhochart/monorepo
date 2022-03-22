@@ -2,8 +2,11 @@
   "name": "@mdm/front",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "node ../../node_modules/vite-ssr/cli.js --port 1337 --force",
+    "dev:spa": "vite --port 1337 --force",
+    "build": "rm -rf dist && node ../../node_modules/vite-ssr/cli.js build",
+    "serve:node": "node ../node-server/index vue",
+
     "preview": "vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
@@ -12,7 +15,8 @@
     "@mdm/config": "workspace:../../tools/config",
     "@mdm/uikit": "workspace:../../libs/uikit",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vite-ssr": "^0.15.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

@@ -7,10 +7,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 
-type TitleTag = 'h1' | 'h2' | 'h3' | 'h4'
-
-type Props = {
-  tag: TitleTag
+export type Props = {
+  tag: 'h1' | 'h2' | 'h3' | 'h4'
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -20,19 +18,19 @@ const props = withDefaults(defineProps<Props>(), {
 const titleClass = computed(() => {
   switch (props.tag) {
     case 'h1':
-      return 'text-4xl'
+      return 'mdm-text-4xl'
 
     case 'h2':
-      return 'text-3xl'
+      return 'mdm-text-3xl'
 
     case 'h3':
-      return 'text-2xl'
+      return 'mdm-text-2xl'
 
     case 'h4':
-      return 'text-xl'
+      return 'mdm-text-xl'
 
     default:
-      return 'text-4xl'
+      return 'mdm-text-4xl'
   }
 })
 </script>
