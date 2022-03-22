@@ -1,0 +1,6 @@
+@import '../../node_modules/@mdm/uikit/dist/style.css';
+
+
+/* @tailwind base; already imported in uikit */
+@tailwind components;
+@tailwind utilities;

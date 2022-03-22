@@ -1,13 +1,37 @@
 <template>
   <main>
+    <MDMTitle>Page title</MDMTitle>
 
-    <h1>Page title</h1>
-
-    <p>Content paragraph.</p>
-
-    <FormGroup />
+    <MDMCard elevated class="mt-32 space-y-16 flex flex-col">
+      <MDMContent>Content paragraph.</MDMContent>
+      <MDMTextInput v-model="value" /> {{ value }}
+      <MDMButton @click="onButtonClick">Click me</MDMButton>
+    </MDMCard>
   </main>
 </template>
+
 <script setup lang="ts">
-import FormGroup from '@/components/molecules/FormGroup.vue'
+import {
+  MDMButton,
+  MDMCard,
+  MDMContent,
+  MDMTextInput,
+  MDMTitle
+} from '@mdm/uikit'
+
+const value = ref('default value')
+
+const router = useRouter()
+definePageMeta({
+  layout: 'default'
+})
+
+function onButtonClick() {
+  router.push({ name: 'pokemon', params: { pokemon: 'tortank' } })
+}
+
+await useAsyncData('pokemon', async () => {
+  await new Promise((resolve) => setTimeout(resolve, 5000))
+  return $fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+})
 </script>
