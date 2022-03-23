@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 import { MDMTitle } from '@mdm/uikit'
-import ProductForm from '../components/organisms/productForm/ProductForm.vue'
-import ProductsGrid from '@/components/organisms/productsGrid/ProductsGrid.vue'
+import ProductForm from '@/components/product/productForm/ProductForm.vue'
+import ProductsGrid from '@/components/product/productsGrid/ProductsGrid.vue'
 
 definePageMeta({
   layout: 'default'

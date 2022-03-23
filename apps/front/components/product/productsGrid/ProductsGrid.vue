@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { useProductsGridQuery } from './ProductsGrid.generated'
-import ProductCard from '@/components/molecules/ProductCard/ProductCard.vue'
+import ProductCard from '@/components/product/productCard/ProductCard.vue'
 
 const { loading, result } = useProductsGridQuery()
 </script>

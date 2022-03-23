@@ -1,7 +1,7 @@
 import * as Types from '../../../generated/graphqlOperations';
 
 import gql from 'graphql-tag';
-import { ProductCardFragmentDoc } from '../../molecules/productCard/ProductCard.generated';
+import { ProductCardFragmentDoc } from '../productCard/ProductCard.generated';
 import * as VueApolloComposable from '@vue/apollo-composable';
 import * as VueCompositionApi from '@vue/composition-api';
 export type ReactiveFunction<TParam> = () => TParam;
