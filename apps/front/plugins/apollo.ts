@@ -4,7 +4,7 @@ import {
   InMemoryCache
 } from '@apollo/client/core'
 import { DefaultApolloClient } from '@vue/apollo-composable'
-import possibleTypes from '@/generated/introspection-result'
+import possibleTypes from '@/__generated__/introspection-result'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const httpLink = createHttpLink({
