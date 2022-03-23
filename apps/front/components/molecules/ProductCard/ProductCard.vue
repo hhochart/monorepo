@@ -13,15 +13,9 @@
 
 <script setup lang="ts">
 import { MDMCard, MDMTitle, MDMContent } from '@mdm/uikit'
+import { ProductCardFragment } from './ProductCard.generated'
 
-export type Product = {
-  id: string
-  image: string
-  title: string
-  description: string
-}
-
-export type Props = { product: Product }
+export type Props = { product: ProductCardFragment }
 
 const props = defineProps<Props>()
 </script>

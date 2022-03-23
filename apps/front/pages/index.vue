@@ -1,11 +1,16 @@
 <template>
-  <main>
-    <ProductsPage />
+  <main class="space-y-32">
+    <MDMTitle>Page title</MDMTitle>
+
+    <ProductForm />
+    <ProductsGrid />
   </main>
 </template>
 
 <script setup lang="ts">
-import ProductsPage from '@/components/organisms/ProductsPage.vue'
+import { MDMTitle } from '@mdm/uikit'
+import ProductForm from '../components/organisms/productForm/ProductForm.vue'
+import ProductsGrid from '@/components/organisms/productsGrid/ProductsGrid.vue'
 
 definePageMeta({
   layout: 'default'

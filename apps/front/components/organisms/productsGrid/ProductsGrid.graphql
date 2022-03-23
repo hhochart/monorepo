@@ -1,4 +1,4 @@
-query products {
+query productsGrid {
   products {
     ...ProductCard
   }

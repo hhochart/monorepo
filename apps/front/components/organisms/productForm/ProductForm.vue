@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 import { MDMButton, MDMTextInput, MDMCard, MDMContent } from '@mdm/uikit'
-import { useProductCreateMutation } from './ProductForm.generated'
-import { ProductsDocument } from '~~/components/organisms/Products.generated'
+import { useCreateProductMutation } from './ProductForm.generated'
+import { ProductsGridDocument } from '@/components/organisms/productsGrid/ProductsGrid.generated'
 
 const titleModel = ref('')
 const descriptionModel = ref('')
@@ -24,7 +24,7 @@ async function onSubmit() {
   descriptionModel.value = ''
 }
 
-const { mutate: createProduct } = useProductCreateMutation(() => ({
+const { mutate: createProduct } = useCreateProductMutation(() => ({
   variables: {
     input: {
       title: titleModel.value,
@@ -36,7 +36,7 @@ const { mutate: createProduct } = useProductCreateMutation(() => ({
   },
   refetchQueries: [
     {
-      query: ProductsDocument
+      query: ProductsGridDocument
     }
   ]
 }))

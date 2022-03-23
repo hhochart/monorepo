@@ -54,17 +54,17 @@ export type QueryProductArgs = {
 
 export type ProductCardFragment = { __typename?: 'Product', id: string, title: string, description: string, image: string };
 
-export type ProductCreateMutationVariables = Exact<{
+export type CreateProductMutationVariables = Exact<{
   input: ProductCreateInput;
 }>;
 
 
-export type ProductCreateMutation = { __typename?: 'Mutation', productCreate: { __typename?: 'ProductCreateOutput', product: { __typename?: 'Product', id: string, image: string } } };
+export type CreateProductMutation = { __typename?: 'Mutation', productCreate: { __typename?: 'ProductCreateOutput', product: { __typename?: 'Product', id: string, image: string } } };
 
-export type ProductsQueryVariables = Exact<{ [key: string]: never; }>;
+export type ProductsGridQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ProductsQuery = { __typename?: 'Query', products: Array<{ __typename?: 'Product', id: string, title: string, description: string, image: string }> };
+export type ProductsGridQuery = { __typename?: 'Query', products: Array<{ __typename?: 'Product', id: string, title: string, description: string, image: string }> };
 
 
       export interface PossibleTypesResultData {

@@ -1,8 +1,5 @@
 <template>
-  <div class="space-y-32">
-    <MDMTitle>Page title</MDMTitle>
-    <ProductForm />
-
+  <div>
     <div v-if="loading">
       <b>Loading ...</b>
     </div>
@@ -18,10 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import { MDMTitle } from '@mdm/uikit'
-import { useProductsQuery } from './Products.generated'
+import { useProductsGridQuery } from './ProductsGrid.generated'
 import ProductCard from '@/components/molecules/ProductCard/ProductCard.vue'
-import ProductForm from '@/components/molecules/ProductForm/ProductForm.vue'
 
-const { loading, result } = useProductsQuery()
+const { loading, result } = useProductsGridQuery()
 </script>
