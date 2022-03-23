@@ -1,0 +1,6 @@
+fragment ProductCard on Product {
+  id
+  title
+  description
+  image
+}
