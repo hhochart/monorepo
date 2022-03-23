@@ -1,38 +1,59 @@
 <template>
   <MDMCard tag="form" elevated class="mt-32 space-y-16 flex flex-col">
     <MDMContent>Content paragraph.</MDMContent>
-    <MDMTextInput v-model.trim="titleModel" placeholder="Titre" />
-    <MDMTextInput v-model.trim="descriptionModel" placeholder="Description" />
-    <MDMButton @click.prevent="onSubmit">Submit</MDMButton>
+    <div>
+      <MDMTextInput v-model.trim="title" placeholder="Titre" />
+      <div v-if="errors.title">{{ errors.title }}</div>
+    </div>
+    <div>
+      <MDMTextInput v-model.trim="description" placeholder="Description" />
+      <div v-if="errors.description">{{ errors.description }}</div>
+    </div>
+    <MDMButton :disabled="!canSubmit" @click.prevent="submitForm">
+      Submit
+    </MDMButton>
   </MDMCard>
 </template>
 
 <script setup lang="ts">
+import { useField, useForm, useIsFormDirty, useIsFormValid } from 'vee-validate'
+import { string, object, type InferType } from 'yup'
+import { computed } from 'vue'
 import { MDMButton, MDMTextInput, MDMCard, MDMContent } from '@mdm/uikit'
 import { useCreateProductMutation } from './ProductForm.generated'
 import { ProductsGridDocument } from '@/components/product/productsGrid/ProductsGrid.generated'
 
-const titleModel = ref('')
-const descriptionModel = ref('')
+const { mutate } = useCreateProductMutation({
+  refetchQueries: [{ query: ProductsGridDocument }]
+})
 
-async function onSubmit() {
-  if (!titleModel.value || !descriptionModel.value) {
-    return
-  }
-  await createProduct({
+const { value: title } = useField<string>('title')
+const { value: description } = useField<string>('description')
+
+const schema = object({
+  title: string().required().min(5),
+  description: string().min(8)
+})
+
+const { handleSubmit, errors } = useForm<InferType<typeof schema>>({
+  validationSchema: schema
+})
+
+const submitForm = handleSubmit(async function (values, { resetForm }) {
+  await mutate({
     input: {
-      title: titleModel.value,
-      description: descriptionModel.value,
+      title: values.title,
+      description: values.description,
       image: `https://picsum.photos/id/${Math.floor(
         Math.random() * 300
       )}/200/300`
     }
   })
-  titleModel.value = ''
-  descriptionModel.value = ''
-}
 
-const { mutate: createProduct } = useCreateProductMutation({
-  refetchQueries: [{ query: ProductsGridDocument }]
+  resetForm()
 })
+
+const formValid = useIsFormValid()
+const formDirty = useIsFormDirty()
+const canSubmit = computed(() => formDirty && formValid)
 </script>

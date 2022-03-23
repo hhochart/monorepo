@@ -15,23 +15,12 @@
 </template>
 
 <script setup lang="ts">
-import { useQuery } from '@vue/apollo-composable'
-import {
-  ProductsGridDocument,
-  ProductsGridQuery,
-  ProductsGridQueryVariables,
-  useProductsGridQuery
-} from './ProductsGrid.generated'
+import { computed } from 'vue'
+import { useProductsGridQuery } from './ProductsGrid.generated'
 
 import ProductCard from '@/components/product/productCard/ProductCard.vue'
 
-const res = useQuery<ProductsGridQuery, ProductsGridQueryVariables>(
-  ProductsGridDocument,
-  {}
-)
-
-
 const { loading, result } = useProductsGridQuery({ prefetch: false })
 
-const products = result.value.products
+const products = computed(() => result.value?.products)
 </script>
