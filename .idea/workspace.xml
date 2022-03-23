@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba8275da-ab44-430a-af85-df06277b2ced" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/.graphqlconfig" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/.graphqlconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/apollo.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/apollo.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/src/product/resolvers/product.queries.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/src/product/resolvers/product.queries.resolver.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/front/components/product/productsGrid/ProductsGrid.vue" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/components/product/productsGrid/ProductsGrid.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     <property name="nodejs_package_manager_path" value="pnpm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.jsgraphql" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/libs/uikit/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/apps/api/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648051606022</updated>
       <workItem from="1648051608264" duration="3519000" />
+      <workItem from="1648056245738" duration="556000" />
     </task>
     <servers />
   </component>

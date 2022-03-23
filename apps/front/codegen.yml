@@ -8,7 +8,7 @@ generates:
       - 'typescript-operations'
       - 'fragment-matcher'
 
-  ./schema.graphql:
+  ./generated/schema.graphql:
     plugins:
       - schema-ast
 
