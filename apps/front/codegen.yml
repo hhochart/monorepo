@@ -1,13 +1,25 @@
 overwrite: true
 schema: 'http://localhost:4000/graphql'
-documents: 'src/**/*.graphql'
+documents: './**/*.graphql'
 generates:
-  src/generated/graphql.ts:
+  ./generated/graphqlOperations.ts:
     plugins:
       - 'typescript'
       - 'typescript-operations'
-      - 'typescript-graphql-files-modules'
       - 'fragment-matcher'
-  ./graphql.schema.json:
+
+  ./generated/introspection-result.ts:
     plugins:
-      - 'introspection'
+      - fragment-matcher
+    config:
+      apolloClientVersion: 3
+
+  ./:
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: generated/graphqlOperations.ts
+    plugins:
+      - typescript-operations
+      - typescript-vue-apollo
+    config:
+      # withCompositionFunctions: false

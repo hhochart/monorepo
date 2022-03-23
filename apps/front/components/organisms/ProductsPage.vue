@@ -18,21 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import { useQuery } from '@vue/apollo-composable'
-import { gql } from '@apollo/client/core'
 import { MDMTitle } from '@mdm/uikit'
-import ProductCard from '@/components/molecules/ProductCard.vue'
-import ProductForm from '@/components/molecules/ProductForm.vue'
+import { useProductsQuery } from './Products.generated'
+import ProductCard from '@/components/molecules/ProductCard/ProductCard.vue'
+import ProductForm from '@/components/molecules/ProductForm/ProductForm.vue'
 
-const PRODUCTS = gql`
-  query GetProducts {
-    products {
-      id
-      title
-      description
-      image
-    }
-  }
-`
-const { loading, result } = useQuery(PRODUCTS)
+const { loading, result } = useProductsQuery()
 </script>
