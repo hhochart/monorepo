@@ -24,8 +24,9 @@
     "@graphql-codegen/near-operation-file-preset": "^2.2.9",
     "@graphql-codegen/typescript": "2.4.8",
     "@graphql-codegen/typescript-operations": "2.3.5",
-    "@graphql-codegen/typescript-vue-apollo-smart-ops": "^2.2.8",
     "@graphql-codegen/typescript-vue-apollo": "^3.2.9",
+    "@graphql-codegen/schema-ast": "^2.4.1",
+    "@graphql-codegen/typescript-vue-apollo-smart-ops": "^2.2.8",
     "@nuxtjs/eslint-config-typescript": "^9.0.0",
     "eslint-config-prettier": "^8.5.0",
     "nuxt3": "latest"

@@ -1,0 +1,25 @@
+type Mutation {
+  productCreate(input: ProductCreateInput!): ProductCreateOutput!
+}
+
+type Product {
+  description: String!
+  id: ID!
+  image: String!
+  title: String!
+}
+
+input ProductCreateInput {
+  description: String!
+  image: String!
+  title: String!
+}
+
+type ProductCreateOutput {
+  product: Product!
+}
+
+type Query {
+  product(productId: ID!): Product
+  products: [Product!]!
+}

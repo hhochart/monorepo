@@ -4,6 +4,6 @@ module.exports = {
       name: 'my-app',
       url: 'http://localhost:4000/graphql',
     },
-    includes: ['src/**/*.graphql'],
+    includes: ['**/*.graphql'],
   },
 }

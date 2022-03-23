@@ -8,6 +8,10 @@ generates:
       - 'typescript-operations'
       - 'fragment-matcher'
 
+  ./schema.graphql:
+    plugins:
+      - schema-ast
+
   ./generated/introspection-result.ts:
     plugins:
       - fragment-matcher
