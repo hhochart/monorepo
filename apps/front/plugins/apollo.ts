@@ -4,12 +4,13 @@ import {
   InMemoryCache
 } from '@apollo/client/core'
 import { DefaultApolloClient } from '@vue/apollo-composable'
+import possibleTypes from '@/generated/introspection-result'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const httpLink = createHttpLink({
     uri: 'http://localhost:4000/graphql'
   })
-  const cache = new InMemoryCache()
+  const cache = new InMemoryCache(possibleTypes)
 
   let apolloClient
   if (process.server) {
