@@ -7,9 +7,14 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@mdm/config": "workspace:../../tools/config",
     "@mdm/uikit": "workspace:../../libs/uikit",
-    "@nuxtjs/tailwindcss": "5.0.0-4"
+    "@nuxtjs/tailwindcss": "5.0.0-4",
+    "@vue/apollo-composable": "^4.0.0-alpha.16",
+    "@vue/apollo-ssr": "^4.0.0-alpha.16",
+    "graphql": "^16.3.0",
+    "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^9.0.0",

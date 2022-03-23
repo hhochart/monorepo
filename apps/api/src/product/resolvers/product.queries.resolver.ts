@@ -15,7 +15,9 @@ export class ProductQueriesResolver {
   }
 
   @Query(() => [Product])
-  products() {
+  async products() {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     return this.productService.getProducts();
   }
 }

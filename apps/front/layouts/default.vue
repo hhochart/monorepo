@@ -7,6 +7,12 @@
         </NuxtLink>
         <span class="text-sm"> Vue3 · Typescript · Tailwind · GraphQL </span>
       </div>
+
+      <ul class="flex space-x-8">
+        <NuxtLink v-for="link in ['pageA', 'pageB']" :key="link" :to="link">
+          {{ link }}
+        </NuxtLink>
+      </ul>
     </header>
 
     <div class="container p-16 flex-grow">

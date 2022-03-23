@@ -35,6 +35,8 @@ export class ProductService {
       image: input.image,
     });
 
+    PRODUCTS.push(product);
+
     return { product };
   }
 }
