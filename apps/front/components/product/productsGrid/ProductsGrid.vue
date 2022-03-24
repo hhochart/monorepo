@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useProductsGridQuery } from './ProductsGrid.generated'
-
 import ProductCard from '@/components/product/productCard/ProductCard.vue'
 
-const { loading, result } = useProductsGridQuery()
+const { loading, result } = useProductsGridQuery({
+  prefetch: false
+})
 
 const products = computed(() => result.value?.products)
 </script>

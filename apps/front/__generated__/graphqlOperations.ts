@@ -12,6 +12,28 @@ export type Scalars = {
   Float: number;
 };
 
+export type Cart = {
+  __typename?: 'Cart';
+  id: Scalars['ID'];
+  items: Array<CartItem>;
+  total: Scalars['Float'];
+};
+
+export type CartItem = {
+  __typename?: 'CartItem';
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image: Scalars['String'];
+  price: Scalars['Float'];
+  status: CartItemStatus;
+  title: Scalars['String'];
+};
+
+export enum CartItemStatus {
+  Disponible = 'DISPONIBLE',
+  SoldOut = 'SOLD_OUT'
+}
+
 export type Mutation = {
   __typename?: 'Mutation';
   productCreate: ProductCreateOutput;
@@ -43,6 +65,7 @@ export type ProductCreateOutput = {
 
 export type Query = {
   __typename?: 'Query';
+  cart: Cart;
   product?: Maybe<Product>;
   products: Array<Product>;
 };
@@ -51,6 +74,13 @@ export type Query = {
 export type QueryProductArgs = {
   productId: Scalars['ID'];
 };
+
+export type CartItemCardFragment = { __typename?: 'CartItem', id: string, title: string, description: string, image: string, status: CartItemStatus, price: number };
+
+export type CartItemsGridQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CartItemsGridQuery = { __typename?: 'Query', cart: { __typename?: 'Cart', total: number, items: Array<{ __typename?: 'CartItem', id: string, title: string, description: string, image: string, status: CartItemStatus, price: number }> } };
 
 export type ProductCardFragment = { __typename?: 'Product', id: string, title: string, description: string, image: string };
 

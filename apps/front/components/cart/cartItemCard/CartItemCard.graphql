@@ -1,0 +1,8 @@
+fragment CartItemCard on CartItem {
+  id
+  title
+  description
+  image
+  status
+  price
+}

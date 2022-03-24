@@ -1,0 +1,8 @@
+query cartItemsGrid {
+  cart {
+    total
+    items {
+      ...CartItemCard
+    }
+  }
+}

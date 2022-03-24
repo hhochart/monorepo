@@ -1,3 +1,23 @@
+type Cart {
+  id: ID!
+  items: [CartItem!]!
+  total: Float!
+}
+
+type CartItem {
+  description: String!
+  id: ID!
+  image: String!
+  price: Float!
+  status: CartItemStatus!
+  title: String!
+}
+
+enum CartItemStatus {
+  DISPONIBLE
+  SOLD_OUT
+}
+
 type Mutation {
   productCreate(input: ProductCreateInput!): ProductCreateOutput!
 }
@@ -20,6 +40,7 @@ type ProductCreateOutput {
 }
 
 type Query {
+  cart: Cart!
   product(productId: ID!): Product
   products: [Product!]!
 }
