@@ -1,5 +1,4 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-
 import { Node } from '@/node/node.model';
 import { ModelPartial } from '@/utils/modelPartial';
 

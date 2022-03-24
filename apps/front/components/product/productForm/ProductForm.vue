@@ -39,7 +39,7 @@ const canSubmit = computed(() => meta.value.dirty && meta.value.valid)
 </script>
 
 <template>
-  <MDMCard tag="form" elevated class="mt-32 space-y-16 flex flex-col">
+  <MDMCard tag="form" elevated class="mt-32 space-y-16 flex flex-col bg-white">
     <MDMContent>Formulaire d'ajout de produit.</MDMContent>
     <div class="grid gap-y-8">
       <MDMTextInput v-model.trim="title" placeholder="Titre" />

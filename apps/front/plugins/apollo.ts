@@ -17,7 +17,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     apolloClient = new ApolloClient({
       link: httpLink,
       cache,
-      ssrMode: false
+      ssrMode: true
     })
     nuxtApp.hook('app:rendered', () => {
       nuxtApp.payload.data['apollo-data'] = apolloClient.extract()
