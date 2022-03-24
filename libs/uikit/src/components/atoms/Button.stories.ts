@@ -5,7 +5,8 @@ export default {
   title: 'atoms/Button',
   component: Button,
   args: {
-    rounded: false
+    rounded: false,
+    disabled: false
   },
   argTypes: {
     theme: {

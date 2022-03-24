@@ -6,7 +6,7 @@ export type ButtonTheme = 'primary' | 'secondary'
 export type Props = {
   theme: ButtonTheme
   rounded?: boolean
-  disabled: boolean
+  disabled?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
