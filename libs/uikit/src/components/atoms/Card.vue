@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
   tag: 'div'
 })
 
-const cardClass = computed(() => (props.elevated ? 'mdm-shadow' : ''))
+const cardClass = computed(() => (props.elevated ? 'mdm-shadow-sm' : ''))
 </script>
 
 <template>

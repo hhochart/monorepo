@@ -17,6 +17,9 @@ module.exports = {
       112: '112px',
     },
     extend: {
+      fontFamily: {
+        sans: 'Open sans'
+      },
       colors: {
         transparent: 'transparent',
         primary: {

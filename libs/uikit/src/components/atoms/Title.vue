@@ -30,7 +30,7 @@ const titleClass = computed(() => {
 </script>
 
 <template>
-  <component :is="props.tag" :class="titleClass">
+  <component :is="props.tag" :class="[titleClass]" class="mdm-font-bold">
     <slot>Default title</slot>
   </component>
 </template>
