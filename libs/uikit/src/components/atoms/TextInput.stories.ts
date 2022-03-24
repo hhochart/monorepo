@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import TextInput from './TextInput.vue'
 import type { Story } from '@storybook/vue3'
-import type { Props } from '@/components/atoms/TextInput.vue'
+import type { Props } from './TextInput.vue'
 
 export default {
   title: 'atoms/TextInput',

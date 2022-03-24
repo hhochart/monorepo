@@ -28,3 +28,20 @@ export const FlatCard = Template.bind({})
 FlatCard.args = {
   elevated: false
 }
+
+const WithHeaderFooterTemplate: Story<Props> = (args) => ({
+  components: { Card },
+  setup() {
+    return { args }
+  },
+  template: `
+  <Card v-bind="args">
+    <template #header>Card header</template>
+    <template #footer>Card footer</template>
+  </Card>`
+})
+
+export const HeaderCard = WithHeaderFooterTemplate.bind({})
+HeaderCard.args = {
+  elevated: true
+}
