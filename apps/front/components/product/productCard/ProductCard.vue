@@ -8,10 +8,10 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <MDMCard elevated class="flex flex-col space-y-16 pt-0 px-0 bg-white">
+  <MDMCard elevated class="flex flex-col space-y-16 bg-white px-0 pt-0">
     <img
       :src="props.product.image"
-      class="w-full object-cover max-w-md rounded-t aspect-square"
+      class="aspect-square w-full max-w-md rounded-t object-cover"
     />
     <div class="px-16">
       <MDMTitle>{{ props.product.title }}</MDMTitle>

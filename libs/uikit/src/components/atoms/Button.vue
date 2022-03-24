@@ -37,7 +37,7 @@ const disabledClasses = computed(() =>
 
 <template>
   <button
-    class="mdm-px-16 mdm-py-8 mdm-ring-opacity-50 focus:mdm-ring-2 focus:mdm-outline-none"
+    class="mdm-px-16 mdm-py-8 mdm-ring-opacity-50 focus:mdm-outline-none focus:mdm-ring-2"
     :class="[themeClasses, roundedClasses, disabledClasses]"
   >
     <slot>Default slot</slot>

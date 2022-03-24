@@ -15,7 +15,7 @@ const products = computed(() => result.value?.products)
       <b>Loading ...</b>
     </div>
 
-    <div class="grid gap-16 grid-cols-3">
+    <div class="grid grid-cols-3 gap-16">
       <ProductCard
         v-for="product in products"
         :key="product.id"

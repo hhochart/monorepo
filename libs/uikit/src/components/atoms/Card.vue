@@ -15,7 +15,7 @@ const cardClass = computed(() => (props.elevated ? 'mdm-shadow-sm' : ''))
 </script>
 
 <template>
-  <component :is="tag" class="mdm-p-16 mdm-rounded" :class="cardClass">
+  <component :is="tag" class="mdm-rounded mdm-p-16" :class="cardClass">
     <slot>Default slot</slot>
   </component>
 </template>

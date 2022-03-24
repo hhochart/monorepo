@@ -19,7 +19,7 @@ defineEmits<Emits>()
   <input
     :value="modelValue"
     :type="props.type"
-    class="mdm-border mdm-border-neural-dark mdm-rounded mdm-px-16 mdm-py-8 focus-within:mdm-ring-2 mdm-ring-neutral-dark focus-within:mdm-outline-none"
+    class="mdm-border-neural-dark mdm-rounded mdm-border mdm-px-16 mdm-py-8 mdm-ring-neutral-dark focus-within:mdm-outline-none focus-within:mdm-ring-2"
     @input="$emit('update:modelValue', ($event.currentTarget as HTMLInputElement).value)"
   />
 </template>

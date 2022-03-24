@@ -7,7 +7,7 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="gap-32 flex justify-center items-center">
+  <main class="flex items-center justify-center gap-32">
     <MDMButton
       theme="secondary"
       class="w-112"

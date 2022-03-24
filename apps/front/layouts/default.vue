@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex min-h-screen flex-col">
     <header class="flex bg-primary p-16 text-white">
       <div class="container flex items-center space-x-4">
         <NuxtLink to="/" class="font-mono text-xl uppercase">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <footer class="bg-primary text-white p-8">
+    <footer class="bg-primary p-8 text-white">
       <div class="container">
         <span class="font-mono text-xl uppercase">Monorepo·</span>
       </div>
