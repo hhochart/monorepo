@@ -4,7 +4,7 @@ import type { Story } from '@storybook/vue3'
 import type { Props } from '@/components/atoms/TextInput.vue'
 
 export default {
-  title: 'TextInput',
+  title: 'atoms/TextInput',
   component: TextInput,
   args: {
     disabled: false

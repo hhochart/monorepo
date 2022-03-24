@@ -2,7 +2,7 @@ import Content, { type Props } from './Content.vue'
 import type { Story } from '@storybook/vue3'
 
 export default {
-  title: 'Content',
+  title: 'atoms/Content',
   component: Content
 }
 

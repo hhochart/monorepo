@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        transparent: 'transparent',
         primary: {
           DEFAULT: '#3C3C3B',
           dark: '#1F1F1F',

@@ -2,7 +2,7 @@ import Card, { type Props } from './Card.vue'
 import type { Story } from '@storybook/vue3'
 
 export default {
-  title: 'Card',
+  title: 'atoms/Card',
   component: Card,
   argTypes: {
     elevated: {

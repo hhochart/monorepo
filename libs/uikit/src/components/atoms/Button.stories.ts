@@ -2,7 +2,7 @@ import Button, { type Props } from './Button.vue'
 import type { StoryFn } from '@storybook/vue3'
 
 export default {
-  title: 'Button',
+  title: 'atoms/Button',
   component: Button,
   args: {
     rounded: false

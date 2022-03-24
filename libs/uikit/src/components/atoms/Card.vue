@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 export type Props = {
-  elevated: boolean
+  elevated?: boolean
   tag: keyof HTMLElementTagNameMap
 }
 

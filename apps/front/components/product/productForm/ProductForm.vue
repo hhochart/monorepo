@@ -41,15 +41,21 @@ const canSubmit = computed(() => meta.value.dirty && meta.value.valid)
 <template>
   <MDMCard tag="form" elevated class="mt-32 space-y-16 flex flex-col">
     <MDMContent>Formulaire d'ajout de produit.</MDMContent>
-    <div>
+    <div class="grid gap-y-8">
       <MDMTextInput v-model.trim="title" placeholder="Titre" />
-      <div v-if="errors.title">{{ errors.title }}</div>
+      <div v-if="errors.title" class="italic text-sm">{{ errors.title }}</div>
     </div>
-    <div>
+    <div class="grid gap-y-8">
       <MDMTextInput v-model.trim="description" placeholder="Description" />
-      <div v-if="errors.description">{{ errors.description }}</div>
+      <div v-if="errors.description" class="italic text-sm">
+        {{ errors.description }}
+      </div>
     </div>
-    <MDMButton :disabled="!canSubmit" @click.prevent="submitForm">
+    <MDMButton
+      class="self-end px-32"
+      :disabled="!canSubmit"
+      @click.prevent="submitForm"
+    >
       Submit
     </MDMButton>
   </MDMCard>
