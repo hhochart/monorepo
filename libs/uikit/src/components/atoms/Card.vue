@@ -1,9 +1,3 @@
-<template>
-  <component :is="tag" class="mdm-p-16 mdm-rounded" :class="cardClass">
-    <slot>Default slot</slot>
-  </component>
-</template>
-
 <script setup lang="ts">
 import { computed } from 'vue'
 
@@ -19,3 +13,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 const cardClass = computed(() => (props.elevated ? 'mdm-shadow' : ''))
 </script>
+
+<template>
+  <component :is="tag" class="mdm-p-16 mdm-rounded" :class="cardClass">
+    <slot>Default slot</slot>
+  </component>
+</template>

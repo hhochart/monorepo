@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useProductsGridQuery } from './ProductsGrid.generated'
+
+import ProductCard from '@/components/product/productCard/ProductCard.vue'
+
+const { loading, result } = useProductsGridQuery()
+
+const products = computed(() => result.value?.products)
+</script>
+
 <template>
   <div>
     <div v-if="loading">
@@ -13,14 +24,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useProductsGridQuery } from './ProductsGrid.generated'
-
-import ProductCard from '@/components/product/productCard/ProductCard.vue'
-
-const { loading, result } = useProductsGridQuery()
-
-const products = computed(() => result.value?.products)
-</script>

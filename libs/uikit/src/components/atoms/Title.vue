@@ -1,9 +1,3 @@
-<template>
-  <component :is="props.tag" :class="titleClass">
-    <slot>Default title</slot>
-  </component>
-</template>
-
 <script lang="ts" setup>
 import { computed } from 'vue'
 
@@ -34,3 +28,9 @@ const titleClass = computed(() => {
   }
 })
 </script>
+
+<template>
+  <component :is="props.tag" :class="titleClass">
+    <slot>Default title</slot>
+  </component>
+</template>
