@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { MDMTitle } from '@mdm/uikit'
-import ProductForm from '@/components/product/productForm/ProductForm.vue'
-import ProductsGrid from '@/components/product/productsGrid/ProductsGrid.vue'
+import { MDMButton } from '@mdm/uikit'
 
 definePageMeta({
   layout: 'default'
@@ -9,10 +7,16 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="space-y-32">
-    <MDMTitle>Page title</MDMTitle>
-
-    <ProductForm />
-    <ProductsGrid />
+  <main class="gap-32 flex justify-center items-center mt-112">
+    <MDMButton
+      theme="secondary"
+      class="w-112"
+      @click="$router.push('/products')"
+    >
+      Produits
+    </MDMButton>
+    <MDMButton theme="secondary" class="w-112" @click="$router.push('/cart')">
+      Paniers
+    </MDMButton>
   </main>
 </template>

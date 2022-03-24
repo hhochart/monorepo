@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-export type ButtonTheme = 'primary' | 'secondary'
-
 export type Props = {
-  theme: ButtonTheme
+  theme: 'primary' | 'secondary'
   rounded?: boolean
   disabled?: boolean
 }
@@ -29,7 +27,7 @@ const themeClasses = computed(() => {
 })
 
 const roundedClasses = computed(() =>
-  props.rounded ? 'mdm-rounded-full' : 'mdm-rounded-xs'
+  props.rounded ? 'mdm-rounded-full' : 'mdm-rounded-sm'
 )
 
 const disabledClasses = computed(() =>
@@ -39,7 +37,7 @@ const disabledClasses = computed(() =>
 
 <template>
   <button
-    class="mdm-px-16 mdm-py-8 mdm-rounded-sm mdm-ring-opacity-50 focus:mdm-ring-2 focus:mdm-outline-none"
+    class="mdm-px-16 mdm-py-8 mdm-ring-opacity-50 focus:mdm-ring-2 focus:mdm-outline-none"
     :class="[themeClasses, roundedClasses, disabledClasses]"
   >
     <slot>Default slot</slot>
