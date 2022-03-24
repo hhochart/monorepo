@@ -20,7 +20,7 @@ import { useProductsGridQuery } from './ProductsGrid.generated'
 
 import ProductCard from '@/components/product/productCard/ProductCard.vue'
 
-const { loading, result } = useProductsGridQuery({ prefetch: false })
+const { loading, result } = useProductsGridQuery()
 
 const products = computed(() => result.value?.products)
 </script>
