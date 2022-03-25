@@ -2,7 +2,7 @@
   <div class="flex min-h-screen flex-col">
     <header class="flex bg-primary p-16 text-white">
       <div class="container flex items-center space-x-4">
-        <NuxtLink to="/" class="font-mono text-xl uppercase">
+        <NuxtLink to="/" class="font-mono text-3xl uppercase">
           Monorepo·
         </NuxtLink>
         <span class="text-sm"> Vue3 · Typescript · Tailwind · GraphQL </span>
