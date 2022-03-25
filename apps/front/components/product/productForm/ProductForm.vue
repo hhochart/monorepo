@@ -39,24 +39,26 @@ const canSubmit = computed(() => meta.value.dirty && meta.value.valid)
 </script>
 
 <template>
-  <MDMCard tag="form" elevated class="mt-32 flex flex-col space-y-16 bg-white">
-    <MDMContent>Formulaire d'ajout de produit.</MDMContent>
-    <div class="grid gap-y-8">
-      <MDMTextInput v-model.trim="title" placeholder="Titre" />
-      <div v-if="errors.title" class="text-sm italic">{{ errors.title }}</div>
-    </div>
-    <div class="grid gap-y-8">
-      <MDMTextInput v-model.trim="description" placeholder="Description" />
-      <div v-if="errors.description" class="text-sm italic">
-        {{ errors.description }}
+  <MDMCard tag="form" elevated class="mt-32 flex flex-col bg-white">
+    <div class="space-y-16">
+      <MDMContent>Formulaire d'ajout de produit.</MDMContent>
+      <div class="grid gap-y-8">
+        <MDMTextInput v-model.trim="title" placeholder="Titre" />
+        <div v-if="errors.title" class="text-sm italic">{{ errors.title }}</div>
       </div>
+      <div class="grid gap-y-8">
+        <MDMTextInput v-model.trim="description" placeholder="Description" />
+        <div v-if="errors.description" class="text-sm italic">
+          {{ errors.description }}
+        </div>
+      </div>
+      <MDMButton
+        class="self-end px-32"
+        :disabled="!canSubmit"
+        @click.prevent="submitForm"
+      >
+        Submit
+      </MDMButton>
     </div>
-    <MDMButton
-      class="self-end px-32"
-      :disabled="!canSubmit"
-      @click.prevent="submitForm"
-    >
-      Submit
-    </MDMButton>
   </MDMCard>
 </template>
