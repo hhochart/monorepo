@@ -27,7 +27,7 @@ const submitForm = handleSubmit(async function (values, { resetForm }) {
       title: values.title,
       description: values.description,
       image: `https://picsum.photos/id/${Math.floor(
-        Math.random() * 300
+        Math.random() * 100
       )}/200/300`
     }
   })
